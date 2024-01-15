@@ -91,7 +91,9 @@ class PersonResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->label('Nome'),
+                    ->label('Nome')
+                    ->sortable()
+                    ->searchable(),
                 IconColumn::make('is_teen')
                     ->label('Adolescente')
                     ->boolean(),
